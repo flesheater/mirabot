@@ -1,0 +1,4 @@
+# Ignore config file of our bot.
+conf/config.php
+
+vendor/*
