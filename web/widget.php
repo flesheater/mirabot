@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
 </head>
 <body>
+  <style>
+  .banner {display: none !important;}
+  </style>
   <script>
     var botmanWidget = {
         frameEndpoint: 'frame.php',
@@ -14,6 +17,6 @@
         bubbleAvatarUrl: 'img/avatar.jpg'
     };
   </script>
-  <script src='https://cdn.jsdelivr.net/npm/botman-web-widget@0/build/js/widget.js'></script>
+  <script src='widget.js'></script>
 </body>
 </html>
