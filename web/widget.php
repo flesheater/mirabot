@@ -10,13 +10,18 @@
   </style>
   <script>
     var botmanWidget = {
-        frameEndpoint: 'frame.php',
+        frameEndpoint: 'frameEndpoint.php',
         chatServer: 'index.php',
-        title: 'Mira the cat as a bot.',
+        title: '😺😺😺 Mira the cat as a bot 🤖🤖🤖',
         mainColor: '#fff',
-        bubbleAvatarUrl: 'img/avatar.jpg'
+        bubbleAvatarUrl: '/assets/img/avatar.jpg',
+        mobileHeight: '100%',
+        mobileWidth: '100%',
+        aboutLink: 'https://aperto.com/',
+        aboutText: 'Aperto',
+        placeholderText: "Let's have a chat ..."
     };
   </script>
-  <script src='widget.js'></script>
+  <script src='/assets/js/widget.js'></script>
 </body>
 </html>

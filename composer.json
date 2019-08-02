@@ -10,10 +10,10 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "botman/botman": "2.4.1",
-        "botman/driver-web": "1.5.1",
+        "botman/botman": "2.*",
+        "botman/driver-web": "1.*",
         "kint-php/kint": "dev-master",
-        "botman/driver-facebook": "1.9.2"
+        "botman/driver-facebook": "1.10.*"
     },
     "autoload": {
         "psr-4": { "Webham\\Mirabot\\": "src" }
