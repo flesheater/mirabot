@@ -19,9 +19,6 @@ class MirabotTest extends TestCase {
         $this->setOutputCallback(function() {});
     }
 
-    /**
-     * 
-     */
     public function testSayingHi() {
         $this->messageRecieves('Hi');
         $this->assertReplay('I am Mira and I am a cat.');
@@ -42,6 +39,36 @@ class MirabotTest extends TestCase {
                 $this->stringContains('Yowl')
             )
         );
+    }
+
+    public function testSayingHowAreYou() {
+        $this->messageRecieves('how are you');
+        $this->assertReplay('"I am fine but I think I need a nap');
+    }
+
+    public function testSayingWantToPlay() {
+        $this->messageRecieves('want to play');
+        $this->assertReplay('"Yes ... with \ud83d\udc39');
+    }
+
+    public function testSayingWhoIsAGoodCat() {
+        $this->messageRecieves('who is a good cat');
+        $this->assertReplay('"me');
+    }
+
+    public function testSayingAskMeAQuestion() {
+        $this->messageRecieves('ask me a question');
+        $this->assertReplay("Which way do you want to go?");
+    }
+
+    public function testSayingRight() {
+        $this->messageRecieves('right');
+        $this->assertReplay("You went right :)");
+    }
+
+    public function testSayingLeft() {
+        $this->messageRecieves('left');
+        $this->assertReplay("You went left :)");
     }
 
     public function testFallback() {
