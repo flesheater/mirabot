@@ -18,6 +18,6 @@ if (file_exists(__DIR__ . '/../conf/config.php')) {
 }
 
 // Creating instance of our bot.
-$chatbot = new Mirabot($config);
-
+$chatbot = new Mirabot($config, ['fb', 'web']);
+$chatbot->attachQuestionResponces();
 $chatbot->listen();

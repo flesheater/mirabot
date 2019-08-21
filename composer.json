@@ -5,17 +5,23 @@
     "authors": [
         {
             "name": "nikolay.borisov",
-            "email": "nikolay.borisov@aperto.de"
+            "email": "nikolay.r.borisov@gmail.com"
         }
     ],
     "minimum-stability": "dev",
     "require": {
         "botman/botman": "2.*",
         "botman/driver-web": "1.*",
-        "kint-php/kint": "dev-master",
         "botman/driver-facebook": "1.10.*"
     },
     "autoload": {
         "psr-4": { "Webham\\Mirabot\\": "src" }
+    },
+    "autoload-dev": {
+        "psr-4": {  "Webham\\Mirabot\\Tests\\": "tests/" }
+    },
+    "require-dev": {
+        "kint-php/kint": "dev-master",
+        "phpunit/phpunit": "7.5.x-dev"
     }
 }
