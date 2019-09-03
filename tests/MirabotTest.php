@@ -2,17 +2,12 @@
 
 namespace Webham\Mirabot\Tests;
 
-use Webham\Mirabot\Mirabot;
-use Webham\Mirabot\QuestionResponses;
-use PHPUnit\Framework\TestCase;
-use Symfony\Component\HttpFoundation\Request;
+use Webham\Mirabot\Tests\MirabotTestCase;
 
 /**
  * 
  */
-class MirabotTest extends TestCase {
-
-    protected $chatbot;
+class MirabotTest extends MirabotTestCase {
 
     public function setUp()
     {
@@ -74,25 +69,5 @@ class MirabotTest extends TestCase {
     public function testFallback() {
         $this->messageRecieves('Some random stuff');
         $this->assertReplay('Mau ?');
-    }
-
-    protected function messageRecieves(String $message) {
-        $request = Request::create(
-            '/',
-            'POST',
-            ['message' => $message]
-          );
-
-        $chatbot = new Mirabot([], ['web'], $request);
-        $chatbot->attachQuestionResponces();
-        $chatbot->listen();
-        return $chatbot;
-    }
-
-    protected function assertReplay($expectedReplay) {
-        $this->assertContains(
-            $expectedReplay,
-            $this->getActualOutput()
-        );
     }
 }
